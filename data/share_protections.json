@@ -1,0 +1,72 @@
+{
+  "9f0e6b6be4c2937cc131bae065a3b774": {
+    "shareId": "0fa4707a-8a56-4b18-a816-3af230b92c44",
+    "shareToken": "9f0e6b6be4c2937cc131bae065a3b774",
+    "passwordEnabled": false,
+    "passwordHash": null,
+    "updatedAt": "2026-08-24T14:10:52.475Z"
+  },
+  "c90d4745ad931074b96a808ed0ce34ef": {
+    "shareId": "9be73f66-50b0-454c-bb22-3e8bc7b587ec",
+    "shareToken": "c90d4745ad931074b96a808ed0ce34ef",
+    "passwordEnabled": true,
+    "passwordHash": "$2b$10$JiKvvY7ge.ElbmM9SX20Sewblv9p6JeGxQtPB4pxpZLlDR.1uiTVW",
+    "updatedAt": "2026-08-24T14:10:52.777Z"
+  },
+  "73ab3056ea769001452164879082bc74": {
+    "shareId": "cb26bb73-b669-4a32-90b2-e4441d13478b",
+    "shareToken": "73ab3056ea769001452164879082bc74",
+    "passwordEnabled": true,
+    "passwordHash": "$2b$10$nKDu0W8Yru5nu0EQlk6tY.rwdQYyXF7QW1/W0uBmk0b6UALAQsBKu",
+    "updatedAt": "2026-08-26T08:54:09.008Z"
+  },
+  "7b64c8ed07620a9de1a051586a92f7ad": {
+    "shareId": "d87d55ec-7e41-49e8-accb-e16cf7d9b2c4",
+    "shareToken": "7b64c8ed07620a9de1a051586a92f7ad",
+    "passwordEnabled": true,
+    "passwordHash": "$2b$10$yzCB/2DdjCGYlUXH8sbpmuHLtB0wqGb8/BYRpH8AUAjDssHPjFDfy",
+    "updatedAt": "2026-08-26T08:54:40.287Z"
+  },
+  "90bc0713fece9c6f2259cad47e6e4eb7": {
+    "shareId": "3fc99439-dd54-426f-8a23-4b9114fbd43f",
+    "shareToken": "90bc0713fece9c6f2259cad47e6e4eb7",
+    "passwordEnabled": true,
+    "passwordHash": "$2b$10$zpsi5CuS3W0Zwo8tdTEBveSm/QQEkGRti.H0pqsxTwszH6jH/Lqiu",
+    "updatedAt": "2026-08-26T08:55:13.412Z"
+  },
+  "c11b0f82a89eff942627ad02778b3df5": {
+    "shareId": "2919361f-9a58-40f8-b15e-971cc9adbe89",
+    "shareToken": "c11b0f82a89eff942627ad02778b3df5",
+    "passwordEnabled": true,
+    "passwordHash": "$2b$10$fj5zVqHlxM9TBiktCZECSOQeDthlRZsIo/BmbWRsDSLRR2liLrqrG",
+    "updatedAt": "2026-08-26T08:55:36.964Z"
+  },
+  "ac86d0eeef0aa33ba4e581707e24b386": {
+    "shareId": "c3d36557-9c24-4a76-b21e-bdd97bd2029c",
+    "shareToken": "ac86d0eeef0aa33ba4e581707e24b386",
+    "passwordEnabled": true,
+    "passwordHash": "$2b$10$PD/3Qqn9VoOfjSIK4NRk4eAyivvIseOCiJqnXx6YudfO8vEb.ENqe",
+    "updatedAt": "2026-08-26T08:56:09.741Z"
+  },
+  "b3aebfc591b2b8a6e794e4a69ad23846": {
+    "shareId": "910c889e-05d7-4cc6-967d-706ef2b212a6",
+    "shareToken": "b3aebfc591b2b8a6e794e4a69ad23846",
+    "passwordEnabled": true,
+    "passwordHash": "$2b$10$YsHRRETm8c0GAzW1TcvSyOZg4BPRHVnGPtFuqM1jB6AjWf6iZEe/i",
+    "updatedAt": "2026-08-26T08:56:31.230Z"
+  },
+  "6efe0b6557e07f50a3143bb7aebb253d": {
+    "shareId": "946609cf-4b17-4848-b020-1ab8ce1f5ad4",
+    "shareToken": "6efe0b6557e07f50a3143bb7aebb253d",
+    "passwordEnabled": false,
+    "passwordHash": null,
+    "updatedAt": "2026-08-28T17:07:06.796Z"
+  },
+  "808752af549a34d654ba269e0f020c04": {
+    "shareId": "6ddf73e5-10b4-4a33-abe8-f285c4f300ba",
+    "shareToken": "808752af549a34d654ba269e0f020c04",
+    "passwordEnabled": true,
+    "passwordHash": "$2b$10$klMWxKqAdfht8hQ7UYHdb.azKwtJIE7E3NT24u.c8pHgJSVESt0Y.",
+    "updatedAt": "2026-08-28T17:07:07.111Z"
+  }
+}
