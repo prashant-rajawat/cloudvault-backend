@@ -1,42 +1,86 @@
 # CloudVault Backend
 
-Backend API for the CloudVault web application.
+The CloudVault backend provides the server-side APIs, authentication integration, database operations and cloud-storage functionality used by the CloudVault frontend.
 
-CloudVault is a web-based application that provides secure backend services for managing application data, authentication, and other server-side operations.
-
-## 🚀 Features
-
-- REST API for the CloudVault application
-- Backend server built with Node.js
-- Express.js server architecture
-- Supabase integration
-- API-based communication with the frontend
-- Server-side data management
-- Environment variable support for sensitive configuration
-- Modular backend structure
-
-## 🛠️ Technologies Used
+## Backend Stack
 
 - Node.js
-- Express.js
 - TypeScript
 - Supabase
-- REST API
-- Git & GitHub
+- PostgreSQL
+- Vercel Serverless Functions
+- REST APIs
 
-## 📁 Project Structure
+## Backend Components
 
-```text
-cloudvault-backend/
-│
-├── server/
-│   └── ...
-│
-├── supabase/
-│   └── ...
-│
-├── server.ts
-├── package.json
-├── package-lock.json
-├── README.md
-└── .gitignore
+### api/
+
+Contains server/API endpoints used by the CloudVault application.
+
+### server/
+
+Contains server-side application logic and backend services.
+
+### supabase/
+
+Contains Supabase-related database configuration, migrations and backend resources.
+
+### data/
+
+Contains application data and backend data-related resources.
+
+### scripts/
+
+Contains development, database and deployment utility scripts.
+
+## Backend Responsibilities
+
+- Authentication integration
+- User account operations
+- Database operations
+- File metadata management
+- Folder management
+- File operations
+- Sharing
+- Storage management
+- Trash operations
+- Starred files
+- Recent files
+- Search
+- Activity tracking
+- Server-side validation
+- Secure API operations
+
+## Security
+
+The backend must keep sensitive credentials server-side.
+
+The following must never be exposed to browser/client-side code:
+
+SUPABASE_SERVICE_ROLE_KEY
+
+SMTP credentials
+
+Database passwords
+
+POSTGRES credentials
+
+Other private server secrets
+
+Frontend authentication uses the public Supabase client configuration.
+
+## Environment Variables
+
+Server-side environment variables include the required Supabase, database and SMTP configuration.
+
+Never commit real secret values to GitHub.
+
+Use `.env.example` to document required variables without exposing secrets.
+
+## Deployment
+
+The backend/API is deployed as part of the CloudVault Vercel deployment.
+
+Production:
+
+https://cloud-vault-azure-chi.vercel.app
