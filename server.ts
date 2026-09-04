@@ -2,14 +2,14 @@ import dotenv from "dotenv";
 dotenv.config({ override: true });
 import express from "express";
 import path from "path";
-import { createServer as createViteServer } from "vite";
+import fs from "fs";
 import { createApp } from "./server/app.js";
 import { errorHandler } from "./server/middleware/errorHandler.js";
 import { logSupabaseStartupDiagnostics } from "./server/config/supabase.js";
 
 async function startServer() {
   const app = createApp();
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   // Prevent non-GET requests or JSON client requests from falling through to HTML index
   app.use((req, res, next) => {
@@ -30,18 +30,43 @@ async function startServer() {
   // Error handling middleware
   app.use(errorHandler);
 
-  // Vite middleware in development; static serve in production
+  // Vite middleware in development; static serve in production if frontend assets are present
   if (process.env.NODE_ENV !== "production") {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa",
-    });
-    app.use(vite.middlewares);
+    try {
+      const { createServer: createViteServer } = await import("vite");
+      const vite = await createViteServer({
+        server: { middlewareMode: true },
+        appType: "spa",
+      });
+      app.use(vite.middlewares);
+    } catch {
+      // In standalone backend development without Vite
+      app.get("/", (req, res) => {
+        res.json({
+          success: true,
+          message: "CloudVault Backend API Server running in development mode",
+          timestamp: new Date().toISOString(),
+        });
+      });
+    }
   } else {
     const distPath = path.join(process.cwd(), "dist");
-    app.use(express.static(distPath));
+    const indexPath = path.join(distPath, "index.html");
+
+    if (fs.existsSync(distPath)) {
+      app.use(express.static(distPath));
+    }
+
     app.get("*", (req, res) => {
-      res.sendFile(path.join(distPath, "index.html"));
+      if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+      } else {
+        res.status(200).json({
+          success: true,
+          message: "CloudVault Backend API Server is running in production",
+          timestamp: new Date().toISOString(),
+        });
+      }
     });
   }
 
